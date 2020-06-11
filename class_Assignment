@@ -1,0 +1,29 @@
+DECLARE
+
+v_fname varchar2(25):='Simar';
+v_lname varchar2(25):='Arora';
+v_n1 number(3):=233;
+v_n2 number(3):=274;
+v_n3 number(3):=v_n1 + v_n2;
+begin
+
+
+dbms_output.put_line('My name is : '||v_fname||' '||v_lname);
+
+dbms_output.put_line('The Sum of '||v_n1||' and '||v_n2 ||' numbers is : '||v_n3);
+
+end;
+
+select * from hr.employees;
+
+---
+declare
+v_fname varchar2(25);
+v_lname varchar2(25);
+begin 
+
+select FIRST_NAME, LAST_NAME into v_fname , v_lname
+from hr.employees
+where employee_id = 105;
+dbms_output.put_line('The employees name is :'||v_fname ||' '||v_lname );
+end;
