@@ -27,3 +27,10 @@ from hr.employees
 where employee_id = 105;
 dbms_output.put_line('The employees name is :'||v_fname ||' '||v_lname );
 end;
+
+SELECT DEPARTMENT_ID, SUM(SALARY) as TotalSalary
+FROM hr.employees
+GROUP BY DEPARTMENT_ID
+order by DEPARTMENT_ID ASC;
+
+
